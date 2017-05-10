@@ -1,4 +1,4 @@
 FROM prom/alertmanager
-ADD simple.yml /etc/alertmanager/config.yml
+ADD config.yml /etc/alertmanager/config.yml
 
 
