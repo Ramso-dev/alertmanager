@@ -3,8 +3,8 @@ MAINTAINER The Prometheus Authors <prometheus-developers@googlegroups.com>
 WORKDIR /go/src/github.com/prometheus/alertmanager
 COPY    . /go/src/github.com/prometheus/alertmanager
 
-RUN apt-get install make \
-    && make build \
+RUN apt-get install makefile \
+    && makefile build \
     && cp alertmanager /bin/ \
     && mkdir -p /etc/alertmanager/template \
     && mv ./doc/examples/config.yml /etc/alertmanager/config.yml \
