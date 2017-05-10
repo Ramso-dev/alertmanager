@@ -1,7 +1,7 @@
 FROM prom/alertmanager
-ADD config.yml /etc/alertmanager/config.yml
+ADD simple.yml /etc/alertmanager/
 
-CMD        [ "-config.file=/etc/alertmanager/config.yml", \
+CMD        [ "-config.file=/etc/alertmanager/simple.yml", \
              "-storage.path=/alertmanager" ]
 
 
