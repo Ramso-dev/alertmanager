@@ -1,4 +1,5 @@
-FROM golang:1.5.3 MAINTAINER The Prometheus Authors <prometheus-developers@googlegroups.com> WORKDIR /go/src/github.com/prometheus/alertmanager
+FROM golang:1.5.3 
+MAINTAINER The Prometheus Authors <prometheus-developers@googlegroups.com> WORKDIR /go/src/github.com/prometheus/alertmanager
 COPY    . /go/src/github.com/prometheus/alertmanager
 ADD simple.yml /etc/alertmanager/
 RUN apt-get install make \
