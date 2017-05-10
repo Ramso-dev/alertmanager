@@ -8,7 +8,8 @@ RUN apt-get install make \
     && mkdir -p /etc/alertmanager/template \
     && mv ./doc/examples/simple.yml /etc/alertmanager/simple.yml \
     && rm -rf /go
-EXPOSE 9093 VOLUME     [ "/alertmanager" ]
+EXPOSE 9093 
+VOLUME     [ "/alertmanager" ]
 WORKDIR    /alertmanager
 ENTRYPOINT [ "/bin/alertmanager" ]
 CMD        [ "-config.file=/etc/alertmanager/simple.yml", \
