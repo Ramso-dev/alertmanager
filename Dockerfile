@@ -6,7 +6,6 @@ RUN apt-get install make \
     && make build \
     && cp alertmanager /bin/ \
     && mkdir -p /etc/alertmanager/template \
-    && mv ./doc/examples/simple.yml /etc/alertmanager/simple.yml \
     && rm -rf /go
 EXPOSE 9093 
 VOLUME     [ "/alertmanager" ]
