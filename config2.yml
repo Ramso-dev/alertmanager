@@ -6,15 +6,14 @@ data:
   config.yml: | 
     global:
       # The smarthost and SMTP sender used for mail notifications.
-      smtp_smarthost: 'smtp.gmail.com:587'
-      smtp_from: 'emailtestingbotcw@gmail.com'
-      smtp_auth_username: 'emailtestingbotcw@gmail.com'
-      smtp_auth_password: 'ABCD1234'
+      smtp_smarthost: 'localhost:25'
+      smtp_from: 'alertmanager@example.org'
+      smtp_auth_username: 'alertmanagerx'
+      smtp_auth_password: 'password'
       # The auth token for Hipchat.
-      hipchat_auth_token: '1234556789'
+      hipchat_auth_token: '1234556788'
       # Alternative host for Hipchat.
       hipchat_url: 'https://hipchat.foobar.org/'
-    # The directory from which notification templates are read.
     templates: 
     - '/etc/alertmanager/template/*.tmpl'
     # The root route on which each incoming alert enters.
@@ -88,7 +87,7 @@ data:
     receivers:
     - name: 'team-X-mails'
       email_configs:
-      - to: 'javier.perez@cloudwerkstatt.com'
+      - to: 'team-X+alerts@example.org'
     - name: 'team-X-pager'
       email_configs:
       - to: 'team-X+alerts-critical@example.org'
