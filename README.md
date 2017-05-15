@@ -8,4 +8,4 @@ oc volume dc/alertmanager --add --name=alert8 -m /etc/alertmanager -t configmap 
 
 to update it you have to remove the old configmap before:
 oc delete configmap alert8
-oc volume dc/alertmanager --remove -name=alert8
+oc volume dc/alertmanager --remove --name=alert8
