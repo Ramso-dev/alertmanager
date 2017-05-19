@@ -6,10 +6,10 @@ data:
   config.yml: | 
     global:
       # The smarthost and SMTP sender used for mail notifications.
-      smtp_smarthost: 'smtp.gmail.com:587'
-      smtp_from: 'emailtestingbotcw@gmail.com'
-      smtp_auth_username: 'emailtestingbotcw@gmail.com'
-      smtp_auth_password: 'ABCD1234'
+      smtp_smarthost: 'esmtp01.itandtel.at'
+      smtp_from: 'cloud@itandtel.at'
+      smtp_auth_username: 'paasprod01'
+      smtp_auth_password: 'YTcwODQ4'
     # The directory from which notification templates are read.
     templates: 
     - '/etc/alertmanager/template/*.tmpl'
