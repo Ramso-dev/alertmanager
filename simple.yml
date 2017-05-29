@@ -1,9 +1,9 @@
 global:
   # The smarthost and SMTP sender used for mail notifications.
-  smtp_smarthost: 'smtp.gmail.com:587'
-  smtp_from: 'emailtestingbotcw@gmail.com'
-  smtp_auth_username: 'emailtestingbotcw@gmail.com'
-  smtp_auth_password: 'ABCD1234'
+  smtp_smarthost: 'smtp.office365.com:587'
+  smtp_from: 'javier.perez@cloudwerkstatt.com'
+  smtp_auth_username: 'javier.perez@cloudwerkstatt.com'
+  smtp_auth_password: 'Kirov1234'
   # The auth token for Hipchat.
   hipchat_auth_token: '1234556789'
   # Alternative host for Hipchat.
