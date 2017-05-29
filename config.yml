@@ -45,4 +45,4 @@ data:
     - name: 'team-X-mails'
       email_configs:
       - to: 'javier.perez@cloudwerkstatt.com'
-        require_tls: true
+        require_tls: false
