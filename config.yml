@@ -6,11 +6,10 @@ data:
   config.yml: | 
     global:
       # The smarthost and SMTP sender used for mail notifications.
-      resolve_timeout: 5m
-      smtp_smarthost: 'smtp.gmail.com:587'
-      smtp_from: 'emailtestingbotcw@gmail.com'
-      smtp_auth_username: 'emailtestingbotcw@gmail.com'
-      smtp_auth_password: 'ABCD1234'
+      smtp_smarthost: smtp.gmail.com:587
+      smtp_from: emailtestingbotcw@gmail.com
+      smtp_auth_username: emailtestingbotcw@gmail.com
+      smtp_auth_password: ABCD1234
     # The directory from which notification templates are read.
     templates: 
     - '/etc/alertmanager/template/*.tmpl'
