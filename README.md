@@ -14,8 +14,8 @@ oc volume dc/alertmanager --remove --name=alert8<br />
 oc get configmap -o json<br />
 
 # Issues:<br />
-Now working in Openshift xxxxx.itxxxx.at:25. It wasn't working locally because the firewall configuration was blocking the requests.
-Gmail and office in port 587 didn't work because looks like the ports are not open in our openshift
+Now working in Openshift xxxxx.itxxxx.at:25. It wasn't working locally because the firewall configuration was blocking the requests.<br />
+Gmail and office in port 587 didn't work because looks like the ports are not open in our openshift.<br />
 
 # Openshift: send outgoing mail test: <br />
 
