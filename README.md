@@ -16,3 +16,15 @@ oc get configmap -o json<br />
 # Issues:<br />
 Now working in Openshift xxxxx.itxxxx.at:25. It wasn't working locally because the firewall configuration was blocking the requests.
 Gmail and office in port 587 didn't work because looks like the ports are not open in our openshift
+
+# Openshift: send outgoing mail test: <br />
+*
+-Use github cli to enable copy-paste
+oc get pods
+oc rsh _podname_
+
+-Create body file:
+vi test
+mv test test.txt
+sendmail -v -f from@mail.at -S smt.server.com auMyusername apMypassword -v < test.txt
+example: sendmail -v -f fromsomeone@email.com -S smtp.google:587 auRamso apabcd1234 -v <test.text
