@@ -18,13 +18,13 @@ Now working in Openshift xxxxx.itxxxx.at:25. It wasn't working locally because t
 Gmail and office in port 587 didn't work because looks like the ports are not open in our openshift
 
 # Openshift: send outgoing mail test: <br />
-*
--Use github cli to enable copy-paste
-oc get pods
-oc rsh _podname_
 
--Create body file:
-vi test
-mv test test.txt
-sendmail -v -f from@mail.at -S smt.server.com auMyusername apMypassword -v < test.txt
-example: sendmail -v -f fromsomeone@email.com -S smtp.google:587 auRamso apabcd1234 -v <test.text
+-Use github cli to enable copy-paste<br />
+oc get pods<br />
+oc rsh _podname_<br />
+
+-Create body file:<br />
+vi test<br />
+mv test test.txt<br />
+sendmail -v -f from@mail.at -S smt.server.com auMyusername apMypassword -v < test.txt<br />
+example: sendmail -v -f fromsomeone@email.com -S smtp.google:587 auRamso apabcd1234 -v <test.text<br />
