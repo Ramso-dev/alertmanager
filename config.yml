@@ -44,10 +44,17 @@ data:
       - match:
           kubernetes_io_hostname: itsrv1529.esrv.local
         receiver: team-G-mails
+      - match:
+          customer: test-label
+        receiver: OwnerOfNode
+        
     receivers:
     - name: 'team-X-mails'
       email_configs:
       - to: 'javier.perez@cloudwerkstatt.com'
     - name: 'team-G-mails'
+      email_configs:
+      - to: 'emailtestingbotcwx@gmail.com'
+     - name: 'OwnerOfNode'
       email_configs:
       - to: 'emailtestingbotcw@gmail.com'
