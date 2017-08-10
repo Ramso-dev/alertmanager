@@ -39,12 +39,12 @@ data:
       routes:
         # parent node and are sent to 'team-X-mails'
       - match:
-          kubernetes_io_hostname: itsrv1529.esrv.local
+          service: nodes
         receiver: cloudwerkstatt
     receivers:
     - name: 'team-X-mails'
       email_configs:
-      - to: 'javier.perez@cloudwerkstatt.com'
+      - to: 'javierx.perez@cloudwerkstatt.com'
     - name: 'cloudwerkstatt'
       email_configs:
       - to: 'javier.perez@cloudwerkstatt.com'
