@@ -40,7 +40,7 @@ data:
         # parent node and are sent to 'team-X-mails'
       - match:
           kubernetes_io_hostname: itsrv1529.esrv.local
-        receiver: team-X-mails
+        receiver: cloudwerkstatt
     receivers:
     - name: 'team-X-mails'
       email_configs:
