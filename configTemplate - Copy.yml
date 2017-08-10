@@ -37,10 +37,11 @@ data:
       # overwritten on each.
       # The child route treess.
       routes:
-        # parent node and are sent to 'team-X-mails'
+        # send CW any alarm related to their projects
       - match_re:
           namespace: ^(logging|cw-prometheus|baz)$
         receiver: cloudwerkstatt
+        # send CW any alarm related to nodes(nodes down or overloaded)
       - match:
           service: nodes
         receiver: cloudwerkstatt
@@ -50,7 +51,6 @@ data:
       - to: 'emailtestingbotcw@gmail.com'
     - name: 'cloudwerkstatt'
       email_configs:
-      - to: 'javier.perez@cloudwerkstatt.com'
       - to: 'emailtestingbotcw@gmail.com'
     - name: 'team-X-pager'
       email_configs:
