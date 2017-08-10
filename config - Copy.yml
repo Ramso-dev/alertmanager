@@ -30,7 +30,7 @@ data:
       group_interval: 1m
       # If an alert has successfully been sent, wait 'repeat_interval' to
       # resend them.
-      repeat_interval: 24h 
+      repeat_interval: 1h 
       # A default receiver
       receiver: team-X-mails
       # All the above attributes are inherited by all child routes and can 
@@ -47,10 +47,6 @@ data:
       - match:
           customer: test-label
         receiver: OwnerOfNode
-      - match:
-          service: nodes
-          namespace: logging
-        receiver: Cloudwerkstatt
         
     receivers:
     - name: 'team-X-mails'
@@ -62,6 +58,3 @@ data:
      - name: 'OwnerOfNode'
       email_configs:
       - to: 'emailtestingbotcw@gmail.com'
-    - name: 'Cloudwerkstatt'
-      email_configs:
-      - to: 'javier.perez@cloudwerkstatt.com'
