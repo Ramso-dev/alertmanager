@@ -51,6 +51,7 @@ data:
       - to: 'emailtestingbotcw@gmail.com'
     - name: 'cloudwerkstatt'
       email_configs:
+      - to: 'javier.perez@cloudwerkstatt.com'
       - to: 'emailtestingbotcw@gmail.com'
     - name: 'team-X-pager'
       email_configs:
