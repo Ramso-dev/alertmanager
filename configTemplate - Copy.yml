@@ -38,13 +38,13 @@ data:
       # The child route treess.
       routes:
         # parent node and are sent to 'team-X-mails'
-      - match-re:
+      - match_re:
           namespace: ^(logging|cw-prometheus)$
         receiver: cloudwerkstatt
-        routes:
-        - match:
-            service: nodes
-          receiver: cloudwerkstatt
+      routes:
+      - match:
+          service: nodes
+        receiver: cloudwerkstatt
     receivers:
     - name: 'team-X-mails'
       email_configs:
