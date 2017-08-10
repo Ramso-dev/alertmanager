@@ -49,7 +49,6 @@ data:
         receiver: OwnerOfNode
       - match:
           service: nodes
-          namespace: logging
         receiver: Cloudwerkstatt
         
     receivers:
