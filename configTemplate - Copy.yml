@@ -53,23 +53,4 @@ data:
       email_configs:
       - to: 'javier.perez@cloudwerkstatt.com'
       - to: 'emailtestingbotcw@gmail.com'
-    - name: 'team-X-pager'
-      email_configs:
-      - to: 'team-X+alerts-critical@example.org'
-      pagerduty_configs:
-      - service_key: <team-X-key>
-    - name: 'team-Y-mails'
-      email_configs:
-      - to: 'team-Y+alerts@example.org'
-    - name: 'team-Y-pager'
-      pagerduty_configs:
-      - service_key: <team-Y-key>
-    - name: 'team-DB-pager'
-      pagerduty_configs:
-      - service_key: <team-DB-key>
-    - name: 'team-X-hipchat'
-      hipchat_configs:
-      - auth_token: <auth_token>
-        room_id: 85
-        message_format: html
-        notify: true
+
