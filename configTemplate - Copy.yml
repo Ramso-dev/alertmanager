@@ -85,6 +85,9 @@ data:
     - name: 'team-X-mails'
       email_configs:
       - to: 'javier.perez@cloudwerkstatt.com'
+    - name: 'cloudwerkstatt'
+      email_configs:
+      - to: 'javier.perez@cloudwerkstatt.com'
     - name: 'team-X-pager'
       email_configs:
       - to: 'team-X+alerts-critical@example.org'
