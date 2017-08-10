@@ -39,8 +39,10 @@ data:
       routes:
         # parent node and are sent to 'team-X-mails'
       - match:
-          service: nodes
           namespace: logging
+        receiver: cloudwerkstatt
+      - match:
+          service: nodes
         receiver: cloudwerkstatt
     receivers:
     - name: 'team-X-mails'
