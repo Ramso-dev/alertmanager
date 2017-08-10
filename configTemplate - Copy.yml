@@ -41,7 +41,6 @@ data:
       - match_re:
           namespace: ^(logging|cw-prometheus)$
         receiver: cloudwerkstatt
-      routes:
       - match:
           service: nodes
         receiver: cloudwerkstatt
