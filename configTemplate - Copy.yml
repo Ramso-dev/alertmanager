@@ -45,7 +45,7 @@ data:
           kubernetes_io_hostname: itsrv1529.esrv.local
         receiver: team-G-mails
       - match:
-          service: nodes
+          kubernetes_io_hostname: itsrv1529.esrv.local
         receiver: cloudwerkstatt
     receivers:
     - name: 'team-X-mails'
