@@ -39,7 +39,7 @@ data:
       routes:
         # parent node and are sent to 'team-X-mails'
       - match:
-          namespace: ^(logging|cw-prometheus)$
+          namespace: (logging|cw-prometheus)
         receiver: cloudwerkstatt
       - match:
           service: nodes
