@@ -47,6 +47,9 @@ data:
       - match:
           customer: test-label
         receiver: OwnerOfNode
+      - match:
+          service: nodes
+        receiver: Cloudwerkstatt
         
     receivers:
     - name: 'team-X-mails'
@@ -55,6 +58,9 @@ data:
     - name: 'team-G-mails'
       email_configs:
       - to: 'emailtestingbotcwx@gmail.com'
-     - name: 'OwnerOfNode'
+    - name: 'OwnerOfNode'
       email_configs:
       - to: 'emailtestingbotcw@gmail.com'
+    - name: 'Cloudwerkstatt'
+      email_configs:
+      - to: 'javier.perez@cloudwerkstatt.com'
