@@ -39,14 +39,8 @@ data:
       routes:
         # parent node and are sent to 'team-X-mails'
       - match:
-          severity: page
+          kubernetes_io_hostname: itsrv1529.esrv.local
         receiver: team-X-mails
-      - match:
-          kubernetes_io_hostname: itsrv1529.esrv.local
-        receiver: team-G-mails
-      - match:
-          kubernetes_io_hostname: itsrv1529.esrv.local
-        receiver: cloudwerkstatt
     receivers:
     - name: 'team-X-mails'
       email_configs:
