@@ -30,7 +30,7 @@ data:
       group_interval: 5m
       # If an alert has successfully been sent, wait 'repeat_interval' to
       # resend them.
-      repeat_interval: 24h 
+      repeat_interval: 3h 
       # A default receiver
       receiver: team-X-mails
       # All the above attributes are inherited by all child routes and can 
@@ -59,8 +59,17 @@ data:
       # This route handles all alerts coming from a database service. If there's
       # no team to handle it, it defaults to the DB team.
       - match:
-          service: nodes
-        receiver: Cloudwerkstatt
+          service: database
+        receiver: team-DB-pager
+        # Also group alerts by affected database.
+        group_by: [alertname, cluster, database]
+        routes:
+        - match:
+            owner: team-X
+          receiver: team-X-pager
+        - match:
+            owner: team-Y
+          receiver: team-Y-pager
     # Inhibition rules allow to mute a set of alerts given that another alert is
     # firing.
     # We use this to mute any warning-level notifications if the same alert is 
@@ -73,26 +82,10 @@ data:
       # Apply inhibition if the alertname is the same.
       equal: ['alertname', 'cluster', 'service']
     receivers:
-    - name: 'Cloudwerkstatt'
+    - name: 'cloudwerkstatt'
       email_configs:
       - to: 'javier.perez@cloudwerkstatt.com'
     - name: 'team-X-pager'
       email_configs:
       - to: 'team-X+alerts-critical@example.org'
-      pagerduty_configs:
-      - service_key: <team-X-key>
-    - name: 'team-Y-mails'
-      email_configs:
-      - to: 'team-Y+alerts@example.org'
-    - name: 'team-Y-pager'
-      pagerduty_configs:
-      - service_key: <team-Y-key>
-    - name: 'team-DB-pager'
-      pagerduty_configs:
-      - service_key: <team-DB-key>
-    - name: 'team-X-hipchat'
-      hipchat_configs:
-      - auth_token: <auth_token>
-        room_id: 85
-        message_format: html
-        notify: true
+
